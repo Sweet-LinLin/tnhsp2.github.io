@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const myVue = new Vue({
+            template:'<h1>{{name}},,,{{lead.name}}</h1>',//模板，是一个字符串
+            //模板语句的数据来源 object|function,Vue实例的数据对象
+            data:{
+                name:"value",
+                releseTime:"20020",
+                lead:{
+                    name:'cc',
+                    age:'40'
+                },
+                actors:[{},{}]
+            },
+            // el:'#app' 
+            //el可以指定vue去接管哪个容器
+        })
+        myVue.$mount('#app') //将Vue实例挂在到app的位置
+    </script>
+</body>
+</html>
